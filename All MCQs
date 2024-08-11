@@ -1,0 +1,585 @@
+Lesson 1: Getting Set Up (Click mark as complete where ever it is there)
+What is Martín's job?
+Select 2
+1. He automates the building and transfer of data extracts using an antiquated process  (RIGHT ANSWER)
+2. He automates the building and transfer of data extracts using a state-of-the art process
+3. He patches and tweaks old automations while trying to write new ones that will also break  (RIGHT ANSWER) 
+
+
+What is Osiris' job?
+1 He works for Snowflake as a data engineer.
+2. He works for Oracle as a data engineer.
+3. He owns a company that sells data to other companies. (RIGHT ANSWER)
+
+
+What is Alinta's job?
+1. She works for Snowflake as a data engineer.
+2. She helps Osiris sell his company's data to other busineses. (RIGHT ANSWER)
+3. She builds data extracts using an automated routine.
+
+
+Is a Snowflake Trial Account required for this workshop?
+1. Yes (RIGHT ANSWER)
+2. No
+
+
+What is the regional requirement for this workshop?
+1. Canada_Ottawa
+2. There is no region requirement. Any region is fine. (But Jakarta can sometimes have issues) (RIGHT ANSWER)
+3. EU
+4. Peru Lima
+
+
+Why is it important to complete this workshop 3-4 days before your trial expires?
+Select all that apply.
+1. It just looks good on your resume.
+2. The last DORA check can require some lag time before the metadata is updated.  (RIGHT ANSWER)
+3. If your trial expires before your last DORA check passes, the staff cannot help you.  (RIGHT ANSWER)
+4. Snowflake staff just like to come up with weird rules to annoy you.
+
+
+How Did You Hear About this Workshop (or Snowflake University)?
+Results
+● I saw a badge on LinkedIn and wanted one.  (RIGHT ANSWER)
+6%
+● I was looking for Cert Prep materials and the Uni Workshops were mentioned for prep.
+13%
+● Someone at Snowflake told me about it.
+3%
+● My company is CONSIDERING Snowflake so I want to know as much as possible!
+18%
+● My company is MOVING to Snowflake so I WANT to know as much as possible.
+18%
+● My company is MOVING to Snowflake, so my boss ORDERED me to take classes here.
+7%
+● I was curious about Snowflake and I want to upskill.
+35%
+
+
+The video above talks about the difference between real-world security best practices and
+how they are different from the practices used in this workshop. Look at the statements
+below and select the ones that are TRUE.
+Select 3.
+1. You should always follow your organizations security policies when dealing with work-related accounts. (RIGHT ANSWER)
+2. The Snowflake Trial Account would not be considered a work-related account. It is a temporary training account with no real data. (RIGHT ANSWER)
+3. We show some workarounds - like reusing the same password, and writing down passwords, that are fine for temporary training accounts but not acceptable for work accounts. (RIGHT ANSWER)
+We require that you set all passwords to ABC123.
+
+
+
+Lesson 2: Understanding the Inbound Shares
+An account named SNOWFLAKE is the source of our database called SNOWFLAKE, but what
+is the data source named originally?
+SFC_SAMPLES
+SNOWFLAKE_SAMPLE_DATA
+ACCOUNT_USAGE
+
+
+What changes appear on the Private Sharing page because we have dropped the
+SNOWFLAKE_SAMPLE_DATA database?
+Select 2.
+Only one tile appears, where before there were two tiles.
+Two tiles still appear, but one has a download button.
+The share from SFSALESSHARED doesn't have a database name at the bottom of the tile
+anymore.
+The share that was coming from SFSALESSHARED changed names to
+SAMPLE_DATA_DELETED.
+
+
+What steps were required to get the sample data back as a database in your account?
+Select all that apply.
+Contact the SFC_SAMPLES account rep.
+Negotiate an SLA for data refresh and availability.
+Set up a nightly FTP routine to download the extract from SFC_SAMPLES.
+Write a stored procedure to ingest the file.
+Create a merge routine to make sure only data that had changed got written to your tables.
+Click on the tile, give the share a name, and choose between Done and View Database.
+
+
+Which of the following were you able to carry out on the SNOWFLAKE database (The
+Account Usage Share)?
+Select all that apply.
+I dropped the SNOWFLAKE database.
+I clicked on the tile and added it back with a different name.
+I renamed it SNOWFLAKE_ACCOUNT_USAGE when I "got" it back.
+I couldn't even find a DROP button for that database/app.
+Why do you think the privileges are called IMPORTED PRIVILEGES in the code we just ran?
+Because the founders of Snowflake imported themselves from France, where they were born.
+Because privileges for a shared database are pre-defined for maximum data security.
+Because non-imported privileges have to arrive by boat.
+Based on the two select statements you just ran, which of the actions below can be done
+with data from a shared database?
+Select all that apply.
+You can use GROUP BY.
+You can use the DISTINCT keyword.
+You can use ORDER BY.
+How many rows of data are there in the NATION table?
+5
+25
+249
+How many rows of data are there in the REGION table?
+5
+25
+249
+How many rows of data do you get when you join the NATION and REGION tables? (but not Group
+them)
+5
+25
+249
+Our view contains shared data. Is it possible to export this shared data from Snowflake?
+Yes, I was able to save the results to a CSV.
+No, when I downloaded the data, the columns of data that came from the share was erased.
+Why are Warehouses functions found under the Admin menu?
+Select 2.
+Because the sizing of warehouses can affect costs in significant ways.
+Because managing warehouses is considered a task for a higher-level, ADMINistrative user.
+Because warehouses are a special kind of database.
+How much does one credit cost for an Enterprise Edition Snowflake Account on AWS in the
+US East 2 (Ohio) Region?
+$2.00
+$2.60
+$3.00
+$3.50
+$4.00
+$5.20
+Look at the image above and read the text. How much has that account "spent" on this
+workshop so far?
+$2.00
+$2.10
+$3.00
+$3.10
+$20.00
+$21.00
+$30.00
+$31.00
+Lesson 3: Joining Local Data With Shared Data
+What did we accomplish with the code we just ran?
+Select all that apply.
+We changed the context role to SYSADMIN so the new database would be owned by the
+SYSADMIN role.
+We created a new shared database.
+We created a new "local" (non-shared) database.
+We created a new schema called NATIVE.
+We set the database and schema context menus using a USE command.
+What did we accomplish with the code we just ran?
+Select all that apply.
+We set our role context menu so that the new warehouse would be owned by SYSADMIN.
+We set our warehouse menu so that the new database would be owned by SYSADMIN.
+We created a new warehouse called INTL_WH.
+We created a new table called INTL_WH.
+We created a new schema called INTL_WH.
+We set the warehouse context menu so that our worksheet would use INTL_WH.
+We set the warehouse context menu so that our worksheet would use INTL_DB.
+What does the code above accomplish?
+Select 2.
+It creates a table in the INTL_DB, in the COUNTRIES schema.
+It creates a table in the INTL_DB, in the PUBLIC schema.
+It creates a table with 8 rows.
+It creates a table with 8 columns.
+It creates a table with 8 users.
+What does the code above accomplish?
+Select 4.
+It creates a file format.
+It creates a table called file format.
+The file format will be used to process a flat text file.
+The file format will be used to process an XML file.
+The file format will skip the first column (index).
+The file format will skip the first row (header).
+The file format will know how to separate values because of a comma separator.
+The file format will know how to separate values because of a pipe separator.
+The file format will know how to separate values because of a tab separator.
+When the CSV file is uploaded into the table, how many rows are added?
+64
+127
+249
+What do you think the code above can tell us (when we run it), directly and indirectly?
+Select 4.
+It tells us the number of rows in the table.
+If it doesn't cause an error, it (indirectly) tells us that a database named PUBLIC must exist.
+If it doesn't cause an error, it (indirectly) tells us that a schema named ISO must exist.
+If it doesn't cause an error, it (indirectly) tells us that a schema named PUBLIC must exist.
+If it doesn't cause an error, it (indirectly) tells us that a table named INT_STDS_ORG_3166 must
+exist.
+If we trust that 249 rows really should be in the table, we can compare the number of rows found
+and decide whether the table was loaded properly.
+Why would we want to use code to check to see if a table exists when we could just browse
+to the table and see it with our own two eyes?
+Select all of them because they are all true.
+Because coding stuff is fun.
+Because translating human actions into code so that computers can do the work for us is one
+foundation of modern society.
+Because someone might want to create a robot to check our lab work so we can get a badge to
+share on social media and we'll want to understand how it works.
+What does the code above accomplish?
+Select 4.
+It joins the data from three different tables.
+It joins 1 table of local data with 2 shared tables.
+It uses the NATION table as a bridge to join our ISO data with the REGION data.
+It displays a REGION label like "Africa" or "Asia" for some of the ISO Countries.
+When it can't find a match in the NATIONS table, it substitutes "Antarctica" as the REGION label.
+How many rows of data were returned from the select statement above?
+5
+25
+249
+Did you notice the phrase "LEFT JOIN" appearing twice in our SELECT statement? What do
+you think would happen if the word "LEFT" was removed from both joins?
+The number of rows would go way down.
+The number of rows would triple or quadruple.
+The number of rows would stay the same.
+What do you think is the difference between a table and a view?
+A table has more rows than a view.
+A table has fewer columns than a view.
+A view can capture a complex select statement and make it simple to run repeatedly.
+A view can capture a table's metadata, duplicate it, and transpose it in the future.
+What do the 3 code blocks above accomplish?
+Select 3.
+Creates a view called Currencies.
+Creates a schema called Currencies.
+Creates a table called Currencies.
+Creates a table that maps Country Codes to a Currency Code.
+Creates a schema that maps Country Codes to a Currency Code.
+Creates a file format.
+How many rows did you load into the two new tables?
+151 and 265
+152 and 266
+265 and 249
+266 and 250
+Check all true statements below.
+Select 2.
+You are asked to create a view.
+The view should be named SIMPLE_CURRENCY.
+The view should have 3 columns.
+The view should join 3 tables.
+How much does one credit cost for an Enterprise Edition Snowflake Account on AWS in the
+EU (Paris) Region?
+$2.80
+$3.00
+$3.50
+$3.90
+$4.00
+How much has the account above "spent" on this workshop so far?
+$3.10
+$4.12
+$5.14
+$6.18
+$7.24
+$8.05
+$9.12
+$10.14
+Lesson 4: Sharing Data with Other Accounts
+Caden, ACME's lead data analyst, did the Data Warehousing Workshop, last week. Which of
+the following statements are likely true?
+Select all that apply.
+Caden has a Snowflake Trial Account.
+If Caden only used the trial for the DWW Workshop, there are still trial credits available.
+World Data Emporium can share their data with Caden's Snowflake Trial Account.
+Caden can use the trial account to preview World Data Emporium's new Snowflake sharing plan.
+Osiris will need to pay for Caden's trial.
+Why will you be setting up the account for ACME/Caden?
+Select all that apply.
+Because my trial account is already being used to represent World Data Emporium.
+Because I need an ACME account to share WDE data to.
+Because it's a good chance to see how accounts can be created using the ORGADMIN role.
+Because trials expire in 30 days.
+Based on the settings Martín just chose for the listing he created, how often will the data be
+refreshed for the ACME account?
+As often as WDE(Osiris' team) updates the data.
+Once per day.
+Once per week.
+Once per month.
+Why do you think the SNOWFLAKE and SNOWFLAKE_SAMPLE_DATA databases did not
+show up on the list during your share creation process?
+Select 2.
+Because I don't have the rights to share the data.
+Because you can't share a share
+Because the data is not interesting.
+Because of my current role setting.
+Why do you think the interface does not show the views you created?
+Because we created "regular" views instead of "secure" views.
+Both our views use data from shares so they cannot be added to the share we are creating.
+Our role is set to ACCOUNTADMIN or SYSADMIN so we cannot see the views.
+Why couldn't the view that includes the NATIONS table be added to the share?
+Select all that apply.
+Because the share already has Consumers added.
+Because only one view is allowed per Outbound Share.
+Because the NATIONS table comes from an Inbound Share (SNOWFLAKE_SAMPLE_DATA)
+Because you can't share a share.
+Which of the items below are options on the menu that reads [All Usage Types] initially?
+All Accounts
+ACME
+Cross-Cloud Auto-fulfillment
+Compute
+Storage
+Data Transfer
+When Data Transfer is chosen as the Usage Type, what will green represent on the graph?
+(Green is the first color after the word TYPE)
+COPY (COPY INTO Statements)
+REPLICATION (to other clouds and/or regions)
+EXTERNAL FUNCTIONS (Like DORA GRADER)
+We want to check the ORGANIZATION_USAGE schema for our new ACME account and we
+want to use DORA. Why not right now?
+We often need to wait a month before the metadata catches up.
+We often need to wait a week before the metadata catches up.
+We often need to wait 3 days before the metadata catches up.
+We often need to wait overnight before the metadata catches up.
+Lesson 5: Understanding Snowflake Costs
+Snowflake cost is broken out into 4 categories. Select them below.
+The max storage used per month.
+The average compressed storage used per month.
+The average uncompressed storage used per month.
+Compute Credits based on number of warehouses created and their sizes.
+Compute Credits based on the amount of time various warehouses were in use.
+Cloud services like state management and coordination.
+Cloud services for workspace stacks billed separately by cloud provider.
+Serverless features like Snowpipe, replication, and clustering.
+Serverless features like storage buckets, IAM roles, and cloud formation templates.
+How much per month does storing a terabyte of data on GCP Netherlands cost?
+$20
+$40
+$46
+How much per month does storing a terabyte of data on AWS Canada Central cost?
+$35
+$40
+$25
+How much per month does storing a terabyte of data on Azure Tokyo cost?
+$35
+$40
+$25
+How much does one credit cost for a Enterprise Edition Snowflake Account on AWS Canada
+Central?
+$2.00
+$2.60
+$3.00
+$3.50
+$4.00
+$5.20
+If credits cost $3/hr, how much will it cost to run a Medium warehouse for 1 hour?
+$3.00
+$6.00
+$9.00
+$12.00
+$14.00
+$16.00
+If credits cost $3/hr, how much will it cost to run a 3XL warehouse for 4 hours?
+$12.00
+$24.00
+$36.00
+$192.00
+$256.00
+$768.00
+Most corporate Snowflake users will NOT be able to...
+Select all that apply.
+Create a Database.
+Edit a Database.
+Create a Warehouse.
+Change the size of a Warehouse.
+Create and modify Resource monitors.
+Create and modify budgets.
+Load data into tables.
+Run SQL Queries.
+Anyone who decides to enter a credit card into their trial account should always...
+...set it up on a Tuesday.
+...call their mother to get permission first.
+...set up Resource Monitors to protect themselves from unexpected costs.
+There are two options for Monitor Type when setting up the Resource Monitor. What are they?
+Storage
+Warehouse
+Serverless
+Account
+User
+What was missing from our account before we created the resource monitors?
+A way to control costs.
+A way to log in.
+A way to run queries.
+If credits for both of your accounts cost $3 per credit, what is the maximum you can now
+"spend" in a single day, if you do not change or delete the resource monitors? (Assume you
+use 100% of the quota you set)
+$3.00
+$9.00
+$11.14
+$24.00
+Continuing the same scenario as in the question above, if you maxed out the credits (above)
+for both of your accounts on a Monday, and it is now Tuesday, what is the maximum you can
+now "spend" on the current day, if you do not change or delete the resource monitors?
+(Assume you use 100% of the quota you set)
+$3.00
+$9.00
+$11.14
+$24.00
+A few hours from now, a message pops up saying "Warehouse 'COMPUTE_WH' cannot be
+resumed because resource monitor '{Daily_3_Credit_Limit}' has exceeded its quota." How
+could you handle this issue?
+Select 2.
+I could take a break and pick up the workshop tomorrow when I will get 3 new credits to work with.
+I could take my Snowflake Account to one of those shady auto shops that rolls back odometers on
+cars.
+I could just edit the quota on the Resource Monitor so that my quota is now 5 per day (in spite of the
+name).
+I could copy and paste the "error" in the message boards as if Resource Monitors are a totally
+mysterious concept over which I can't possibly have full control.
+Which of the following statements are true?
+Select 4.
+Budgets are available in all Trial Accounts created after June of 2023.
+Budgets are only available in Paid Accounts.
+Once a Trial Account has been converted to paid, Budgets will be activated.
+Once a Trial Account has been converted to paid, Budgets will need to be activated.
+Budgets and Resource Monitors are the same thing, just named differently.
+Budgets are needed in additon to Resource Monitors because they include projections.
+Budgets are needed in additon to Resource Monitors because they cover more usage types.
+Lesson 6: Shopping the Snowflake Marketplace
+Select all statements that are true, based on the video above:
+Lottie picks up a pair of shoes she ordered.
+Lottie picks up a purse she ordered.
+Caden once tried to pirate movies for her friends.
+Caden once tried to pirate music and downloaded a virus, instead.
+The Snowflake Marketplace is like a shopping mall for data and apps.
+The Snowflake Marketplace is like a shopping mall to find data engineers you can hire.
+How many sample queries did WeatherSource include in their sample queries worksheet?
+2
+3
+4
+5
+How many schemas appear in WeatherSource's share?
+0
+1
+2
+3
+4
+How many tables appear in WeatherSource's share?
+0
+1
+2
+3
+4
+How many secure views appear in WeatherSource's share (in the STANDARD_TILE schema)?
+0
+1
+2
+3
+4
+Lesson 7: Caden Explores the Weather Data
+Does the HISTORY_DAY view include data from the United States?
+Yes
+No
+Does the HISTORY_DAY view include data from Germany?
+Yes
+No
+Does the HISTORY_DAY view include data from Canada?
+Yes
+No
+How many different US postal codes starting with either 481 or 482 are included in the
+HISTORY_DAY view?
+0
+1
+3
+5
+7
+9
+How many rows are in the HISTORY_DAY view?
+Less than 100K
+More than 100K but less than 200K
+More than 200K but less than 300K
+More than 300K but less than 500K
+More than 500K
+How many rows in the HISTORY_DAY view are for Detroit Zips (as defined in our view)?
+Less than 15K
+More than 15K but less than 30K
+More than 30K but less than 60K
+More than 60K but less than 80K
+More than 80K
+Which fields in the HISTORY_DAY view are TEXT?
+DOY_STD
+DATE_VALID_STD
+COUNTRY
+POSTAL_CODE
+Which view has the widest date range?
+STANDARD_TILE
+HISTORY_DAY
+FORECAST_DAY
+How many rows per date do we want our result set to have?
+1
+9
+14
+What do Lottie and Caden do with Marketplace data before requesting budget for premium
+data?
+Select 2.
+Explore different datasets.
+Create proofs of concepts.
+Upload their own data into the Marketplace.
+Lesson 8: Auto Data Unlimited
+Why don't Max and his boss initially like the idea of Snowflake Collaboration?
+They think their data and logic will lose its value if it is exposed.
+They think their customers won't like what their data provides.
+They think other companies will provide better data than they do.
+How many schemas should your VIN database have?
+2
+3
+4
+How many tables should VIN.DECODE schema have?
+3
+4
+5
+How many tables did we join together to get the results from the select statement above?
+(Don't count the sub-query as a table)
+3
+4
+5
+When do we use a $ in front of our variable name?
+When we create the variable.
+When we set the variable value.
+When we use the variable.
+Why did we replace $sample_vin with THIS_VIN in the code?
+Select 2.
+With a function we don't need to use a local variable.
+THIS_VIN is what we named the value we will be passing into the function.
+You can't have a local variable named using an underscore.
+What is the MAKE of VIN 19UUB2F34LA001631?
+Acura
+Bentley
+BMW
+Chevrolet
+Ford
+Honda
+Kia
+Jaguar
+Since your ACME account and your ADU account are on two different clouds, how can they
+share so easily with one another?
+They can't. That's why I see an error message about cross-cloud incompatibility.
+I will export the data as csv files out of one account and into the other every day. So fun!
+Snowflake will create a new database called SNOWFLAKE$GDS and use it to automate the
+replication needed.
+As long as I purchase the DELUXE version of Snowflake, a Snowflake employee will manage
+the replication.
+Lesson 9: Caden Receives Max's Function
+What is the difference between the file format you created for WDE and file format you
+created for ACME just now?
+Select all that apply.
+They have different names.
+They have a different field_delimiter.
+They have different settings for record_delimiter.
+They are in different Snowflake Accounts.
+If you want to load a 3-column file into an 18-column table?
+Select all that apply.
+Use the SKIP_HEADER property in your FILE FORMAT
+Use the SKIP_HEADER property in your COPY INTO
+Use the PARSE_HEADER property in your FILE FORMAT
+Use the PARSE_HEADER property in your COPY INTO
+Use the MATCH_BY_COLUMN_NAME in your FILE FORMAT
+Use the MATCH_BY_COLUMN_NAME in your COPY INTO
+Set the File Format's ERROR_ON_COLUMN_COUNT_MISMATCH to TRUE
+Set the File Format's ERROR_ON_COLUMN_COUNT_MISMATCH to FALSE
+If ACME Can't see the tables and their data, how can they run the function that uses those
+tables and their data?
+The magic of Snowflake Collaboration!
+What are some good ways to keep costs very low, if that's your primary concern?
+Select 5.
+Use 6XL Warehouses so everything runs as fast as possible.
+Use XS Warehouses that only use one credit per hour.
+Turn off Auto-Suspend because it's annoying.
+NEVER turn off Auto-Suspend because it keeps you from running a warehouse that isn't
+doing anything.
+Set up Resource Monitors with High Daily Limits so you aren't bothered with notifications.
+Set up Resource Monitors that alert you, especially to unexpected costs within a certain
+time period or from a certain warehouse.
+Edit your USER profile so that you receive email notifications.
+If you convert your trial to a Paid Account, set up Budgets and check the projections often.
