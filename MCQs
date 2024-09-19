@@ -772,3 +772,33 @@ When we set the variable value.
 When we use the variable. (RIGHT ANSWER)
 
 -----------------
+Why did we replace $sample_vin with THIS_VIN in the code?
+Select 2.
+Ans : 1 and 2 
+With a function we don't need to use a local variable. (RIGHT ANSWER)
+THIS_VIN is what we named the value we will be passing into the function. (RIGHT ANSWER)
+You can't have a local variable named using an underscore.
+
+-------------
+
+What is the MAKE of VIN 19UUB2F34LA001631?
+Ans : 1 only 
+Acura  (RIGHT ANSWER)
+Bentley
+BMW
+Chevrolet
+Ford
+Honda
+Kia
+Jaguar
+----------
+
+Since your ACME account and your ADU account are on two different clouds, how can they share so easily with one another?3
+Ans : 3 only 
+They can't. That's why I see an error message about cross-cloud incompatibility.
+I will export the data as csv files out of one account and into the other every day. So fun!
+Snowflake will create a new database called SNOWFLAKE$GDS and use it to automate the replication needed. (RIGHT ANSWER)
+As long as I purchase the DELUXE version of Snowflake, a Snowflake employee will manage the replication.
+
+-----------
+
